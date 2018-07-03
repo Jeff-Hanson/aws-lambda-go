@@ -14,12 +14,12 @@ import (
 func main() {
 	app := cli.NewApp()
 	app.Name = "build-lambda-zip"
-	app.Usage = "Put an executable into a zip file that works with AWS Lambda."
+	app.Usage = "Put an executable and supplemental files into a zip file that works with AWS Lambda."
 	app.Flags = []cli.Flag{
 		cli.StringFlag{
 			Name:  "output, o",
 			Value: "",
-			Usage: "output file path for the zip. Defaults to the input file name.",
+			Usage: "output file path for the zip. Defaults to the first input file name.",
 		},
 	}
 
